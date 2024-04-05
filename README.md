@@ -11,7 +11,7 @@ A simple password manager that stores passwords in database. The password manage
 ## How to use
 1. Clone the repository
 2. Open the terminal and navigate to the repository
-3. Run the following command to compile the code
+3. Run the following command to compile the code (***Note:- YOU SHOULD DOWNLOAD SQLITE3 BEFORE RUNNING THIS COMMAND***)
 ```
 gcc main.c -lsqlite3 -o password_manager
 ```
