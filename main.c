@@ -6,6 +6,7 @@ sqlite3 *db;
 char *zErrMsg = 0;
 int rc;
 
+void clear_screen();
 int addData();
 int showData();
 int deleteData();
@@ -38,18 +39,22 @@ int main()
         switch (choice)
         {
         case 1:
+            clear_screen();
             showData();
             printf("\n");
             break;
         case 2:
+            clear_screen();
             addData();
             printf("\n");
             break;
         case 3:
+            showData();
             deleteData();
             printf("\n");
             break;
         case 4:
+            showData();
             modifyData();
             printf("\n");
             break;
@@ -216,4 +221,9 @@ int showData()
     sqlite3_finalize(stmt);
     sqlite3_close(db);
     return 0;
+}
+
+void clear_screen()
+{
+    system("clear");
 }
